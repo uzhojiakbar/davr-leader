@@ -6,6 +6,7 @@ import Home from "../pages/home/home";
 import Navbar from "../components/navbar/navbar";
 import Login from "../pages/login";
 import NavigateHome from "../components/NavigateHome/navigateHome";
+import Products from "../components/products";
 
 const Root = () => {
   useEffect(() => {
@@ -28,6 +29,8 @@ const Root = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/products" element={<Products />} />
+
         <Route path="*" element={<h1>Not found</h1>} />
       </Routes>
     </RootContainer>
@@ -35,3 +38,5 @@ const Root = () => {
 };
 
 export default Root;
+
+[{ name: "Mahsulotlar" }, { name: "Hisobotlar" }];

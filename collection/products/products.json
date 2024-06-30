@@ -1,0 +1,24 @@
+[
+  {
+    "id": 1,
+    "name": "Mahsulot",
+    "pic": "",
+    "price": {
+      "zero": 510000,
+      "3month": 550000,
+      "5month": 580000,
+      "6month": 590000
+    }
+  },
+  {
+    "id": 2,
+    "name": "Mahsulot 2",
+    "pic": "",
+    "price": {
+      "zero": 510000,
+      "3month": 550000,
+      "5month": 580000,
+      "6month": 590000
+    }
+  }
+]

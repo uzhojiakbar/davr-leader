@@ -11,7 +11,6 @@ const Login = () => {
 
   const UsernameRef = useRef({});
   const PassRef = useRef({});
-
   const nav = useNavigate();
 
   useEffect(() => {
@@ -24,7 +23,7 @@ const Login = () => {
     setLoading(1);
 
     try {
-      const res = await axios.get("http://localhost:4000/api/books");
+      const res = await axios.get("http://localhost:4000/api/admin");
 
       const user = UsernameRef.current.input.value;
       const pass = PassRef.current.input.value;

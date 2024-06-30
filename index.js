@@ -41,8 +41,14 @@ async function writeData(filePath, data) {
 // });
 
 // *LOGIN
-app.get("/api/books", async (req, res) => {
+app.get("/api/admin", async (req, res) => {
   const data = await readData("collection/admin/admin.json");
+  res.json(data);
+});
+
+// Products
+app.get("/api/products", async (req, res) => {
+  const data = await readData("./collection/products/products.json");
   res.json(data);
 });
 
