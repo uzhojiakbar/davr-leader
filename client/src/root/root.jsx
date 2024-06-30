@@ -7,6 +7,7 @@ import Navbar from "../components/navbar/navbar";
 import Login from "../pages/login";
 import NavigateHome from "../components/NavigateHome/navigateHome";
 import Products from "../components/products";
+import Sidebar from "../components/Sidebar";
 
 const Root = () => {
   useEffect(() => {
@@ -25,14 +26,18 @@ const Root = () => {
   }
   return (
     <RootContainer>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/products" element={<Products />} />
+      {/* <Navbar /> */}
+      <Sidebar />
+      <div>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/products" element={<Products />} />
 
-        <Route path="*" element={<h1>Not found</h1>} />
-      </Routes>
+          <Route path="*" element={<h1>Not found</h1>} />
+        </Routes>
+      </div>
     </RootContainer>
   );
 };
