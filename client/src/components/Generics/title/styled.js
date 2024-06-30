@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { media } from "../../mock/media";
+import { media } from "../../../mock/media";
 
 const TitleContainer = styled.div`
   display: flex;
@@ -9,7 +9,6 @@ const TitleContainer = styled.div`
   gap: 10px;
 
   cursor: pointer;
-  padding: 10px;
   user-select: none;
 `;
 

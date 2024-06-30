@@ -14,7 +14,7 @@ import {
 import { useLocation, useNavigate } from "react-router-dom";
 import Profile from "./profile";
 import sidebar from "../../utils/sidebar.jsx";
-import Title from "../title/title";
+import Title from "../Generics/title/title.jsx";
 // import Navbar from "../Navbar";
 
 const Sidebar = () => {
