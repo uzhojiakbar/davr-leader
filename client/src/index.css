@@ -18,6 +18,7 @@
   --primaryColor: #253e5f;
   --secondaryColor: #bbc3cd;
   --activeColor: #1890ff;
+  --main-color: #1890ff;
 }
 
 * {
@@ -47,6 +48,7 @@
   -webkit-mask-composite: destination-in;
   mask-composite: intersect;
   animation: l5 1s infinite;
+  z-index: 111;
 }
 
 .loaderWindow {
@@ -60,7 +62,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 111;
+  z-index: 100;
   background-color: rgba(255, 255, 255, 0.4);
 
   transition: 0.2s;

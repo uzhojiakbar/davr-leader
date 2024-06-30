@@ -5,9 +5,8 @@ import { Route, Routes, useNavigate } from "react-router-dom";
 import Home from "../pages/home/home";
 import Navbar from "../components/navbar/navbar";
 import Login from "../pages/login";
-import NavigateHome from "../components/NavigateHome/navigateHome";
-import Products from "../components/products";
 import Sidebar from "../components/Sidebar";
+import sidebar from "../utils/sidebar";
 
 const Root = () => {
   useEffect(() => {
@@ -31,10 +30,24 @@ const Root = () => {
       <div>
         <Navbar />
         <Routes>
-          <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/products" element={<Products />} />
 
+          {sidebar.map((v) => {
+            if (v.children?.length > 0) {
+              return v.children.map((child) => {
+                return (
+                  <Route
+                    key={child.id}
+                    path={child.path}
+                    element={child.element}
+                  />
+                );
+              });
+            }
+            return <Route key={v.id} path={v.path} element={v.element} />;
+          })}
+
+          <Route path="/" element={<Home />} />
           <Route path="*" element={<h1>Not found</h1>} />
         </Routes>
       </div>

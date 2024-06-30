@@ -16,16 +16,16 @@
 // import GroupsView from "../views/GroupsView";
 // import GroupsRoomView from "../views/GroupsRoom";
 import arrow from "../assets/icons/arrow.svg?react";
+import Products from "../components/products";
 
 const sidebar = [
   {
     id: 1,
-    title: "Analitika",
-    path: "/analitika",
+    title: "Mahsulotlar",
+    path: "/products",
     icon: arrow,
     isPrivate: true,
-    element: <h1>Home</h1>,
-    role: ["admin", "manager"],
+    element: <Products />,
   },
   {
     id: 2,

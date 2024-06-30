@@ -14,6 +14,7 @@ const Products = () => {
         setAllProducts(respone.data);
       });
       setLoading(0);
+      return 1;
     }
   };
 
