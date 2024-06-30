@@ -48,7 +48,9 @@ const Sidebar = () => {
   };
 
   const logOut = () => {
+    localStorage.setItem("login", "false");
     navigate("/login");
+    document.location.reload();
   };
 
   const onChildClick = (parent, child, path, e) => {
